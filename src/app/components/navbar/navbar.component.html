@@ -1,0 +1,42 @@
+<div class="navbar">
+  <ng-template [ngIf]="this.device == 'mobile'">
+    <div class="navbar__menu" (click)="handleOpenSidebar()">
+      <mat-icon>menu</mat-icon>
+    </div>
+  </ng-template>
+  <div class="navbar__logo"></div>
+
+  <ng-template [ngIf]="this.device == 'pc'">
+    <div class="navbar__actions">
+      <button mat-button class="navbar__onshore">
+        Onshore Wind & Offshore Wind
+      </button>
+      <div class="navbar__icons" mat-icon-button>
+        <mat-icon>home</mat-icon>
+      </div>
+
+      <div class="navbar__icons" [matMenuTriggerFor]="langMenu" mat-icon-button>
+        <mat-icon>language</mat-icon>
+      </div>
+      <mat-menu #langMenu="matMenu">
+        <ng-template matMenuContent>
+          <button mat-menu-item (click)="changeLanguage('vn')">
+            <div class="navbar__lang">
+              <div class="navbar__lang-vn"></div>
+              <span>VN</span>
+            </div>
+          </button>
+          <button mat-menu-item (click)="changeLanguage('en')">
+            <div class="navbar__lang">
+              <div class="navbar__lang-en"></div>
+              <span>EN</span>
+            </div>
+          </button>
+        </ng-template>
+      </mat-menu>
+      <div class="navbar__icons" mat-icon-button>
+        <mat-icon>notifications</mat-icon>
+      </div>
+    </div>
+  </ng-template>
+</div>

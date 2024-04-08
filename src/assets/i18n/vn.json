@@ -1,0 +1,17 @@
+{
+  "hello": "xin chào",
+  "dashboard": "Bảng điều khiển",
+  "item": "Sản phẩm",
+  "notification": "Thông báo",
+  "user": "Người dùng",
+  "sidebar": {
+    "dashboard": "Bảng điều khiển",
+    "item": "Sản phẩm",
+    "notification": "Thông báo",
+    "user": "Người dùng",
+    "search": "Tìm kiếm",
+    "settings": "Cài đặt",
+    "help": "Trợ giúp",
+    "language": "Ngôn ngữ"
+  }
+}

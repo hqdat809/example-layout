@@ -1,0 +1,17 @@
+{
+  "hello": "hello",
+  "dashboard": "Dashboard",
+  "item": "Item",
+  "notification": "Notification",
+  "user": "User",
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "item": "Item",
+    "notification": "Notification",
+    "user": "User",
+    "search": "Search",
+    "settings": "Settings",
+    "help": "Help",
+    "language": "Language"
+  }
+}

@@ -1,0 +1,84 @@
+.navbar {
+  width: 100%;
+  min-height: 78px;
+  background-color: hsl(181, 100%, 19%);
+  border-bottom: 5px solid rgb(171, 231, 23);
+  &__logo {
+    margin-left: 20px;
+    background-image: url("../../../assets/images/logo.png");
+    background-size: 240px 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 56px;
+    width: 240px;
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__lang-vn {
+    background-image: url("../../../assets//images/VN-lang.jpg");
+  }
+
+  &__lang-en {
+    background-image: url("../../../assets//images/EN-lang.jpg");
+  }
+
+  &__lang-vn,
+  &__lang-en {
+    background-position: center;
+    width: 25px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__icons {
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 10px;
+  }
+
+  &__onshore {
+    background-color: hsl(181, 100%, 19%);
+    color: #fff;
+    border: 1px solid #cccc;
+    padding: 4px 8px;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* Your CSS styles for tablet devices here */
+
+  .navbar {
+    display: flex;
+    justify-content: start;
+    &__logo {
+      flex: 1;
+      margin-left: 0;
+    }
+
+    &__menu {
+      color: #fff;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

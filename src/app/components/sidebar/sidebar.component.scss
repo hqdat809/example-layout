@@ -1,0 +1,49 @@
+.sidebar {
+  padding: 0;
+  height: 100%;
+  background-color: #005e60;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-color: #fff;
+
+  &__menu {
+    max-width: 72px;
+    cursor: pointer;
+    padding: 24px;
+  }
+
+  &__list {
+    flex: 1;
+  }
+
+  &__label {
+    min-width: 120px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 15px 22px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #529595;
+    }
+
+    &:hover {
+      background-color: #529595;
+    }
+  }
+}
+
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav {
+  padding: 20px;
+}

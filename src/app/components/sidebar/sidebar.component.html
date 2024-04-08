@@ -1,0 +1,61 @@
+<div class="sidebar">
+  <ng-template [ngIf]="this.device == 'pc'">
+    <div (click)="isExpand = !isExpand" class="sidebar__menu">
+      <mat-icon>menu</mat-icon>
+    </div>
+  </ng-template>
+  <div class="sidebar__list">
+    <div *ngFor="let item of listSidebarItems">
+      <div
+        [routerLink]="item.route"
+        class="sidebar__item"
+        [class.active]="currentUrl == item.route"
+      >
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <ng-template [ngIf]="isExpand">
+          <span class="sidebar__label">{{ item.label | translate }}</span>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <ng-template [ngIf]="this.device == 'mobile'">
+    <div class="sidebar__item" [matMenuTriggerFor]="langMenu">
+      <mat-icon>language</mat-icon>
+      <ng-template [ngIf]="isExpand">
+        <span>{{ "sidebar.language" | translate }}</span>
+      </ng-template>
+    </div>
+    <mat-menu #langMenu="matMenu">
+      <ng-template matMenuContent>
+        <button mat-menu-item (click)="changeLanguage('vn')">
+          <div class="navbar__lang">
+            <div class="navbar__lang-vn"></div>
+            <span>VN</span>
+          </div>
+        </button>
+        <button mat-menu-item (click)="changeLanguage('en')">
+          <div class="navbar__lang">
+            <div class="navbar__lang-en"></div>
+            <span>EN</span>
+          </div>
+        </button>
+      </ng-template>
+    </mat-menu>
+  </ng-template>
+  <div class="sidebar__footer">
+    <div class="sidebar__item">
+      <mat-icon>settings</mat-icon>
+      <ng-template [ngIf]="isExpand">
+        <span>{{ "sidebar.settings" | translate }}</span>
+      </ng-template>
+    </div>
+    <div class="sidebar__item">
+      <mat-icon>help_outline</mat-icon>
+      <ng-template [ngIf]="isExpand">
+        <span>{{ "sidebar.help" | translate }}</span>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<ng-template [ngIf]="drawer.opened"> </ng-template>
